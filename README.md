@@ -1,7 +1,7 @@
 # Trailer-Loading-Coding
 A coding assignment to develop a program to load a semi-trailer with cargo. 
 
-#Prompt
+# Prompt
 A 53 foot dry van is the most common trailer that is aƩached to a tractor for truck cargo in North
 America. If you open the doors, remove the roof, and look at it from above it forms a U-shape with the
 open doors at the top and the closed end that aƩaches to the tractor at the boƩom.
