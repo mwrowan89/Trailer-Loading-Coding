@@ -23,11 +23,11 @@ task. We will not offer addiƟonal informaƟon outside of this problem statement
 
 
 # Constraints:
- x-axis is a 1-character string corresponding to an integer >= 0 and <= 9. The x-axis is the leŌmost
-part of the piece.
- shape is one upper case character in the set below
- entries are two characters delimited by a comma
- input length is 1 to 500 entries long
- the cargo will not overfill the trailer
- the input is always well formaƩed
- the x-axis porƟon of the pieces always fit into the width of the trailer
+* x-axis is a 1-character string corresponding to an integer >= 0 and <= 9. The x-axis is the leftmost
+part of the piece
+* shape is one upper case character in the set below
+* entries are two characters delimited by a comma
+* input length is 1 to 500 entries long
+* the cargo will not overfill the trailer
+* the input is always well formated
+* the x-axis porƟon of the pieces always fit into the width of the trailer
