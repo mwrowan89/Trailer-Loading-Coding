@@ -6,8 +6,8 @@ import java.util.Scanner;
 public class App
 {
     public static void main( String[] args ) {
-        String shape = "";
-        String position = "";
+        String shape;
+        String position;
 
         Scanner input = new Scanner(System.in);
         System.out.println("Welcome To The Trailer-Loader-Coder!");
@@ -19,6 +19,7 @@ public class App
 
         if(position.equalsIgnoreCase("") || shape.equalsIgnoreCase("")){
             System.out.println("Invalid Entry.");
+            input.close();
             System.exit(0);
         }
 
