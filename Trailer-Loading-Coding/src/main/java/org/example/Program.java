@@ -11,7 +11,7 @@ public class Program {
         Map<String, String> shapeMap = new HashMap<>();
         int rows = 52;
         int cols = 10;
-        //buildTruck(cols, rows);
+        buildTruck(cols, rows);
 
         boolean inputs = true;
 
@@ -47,8 +47,15 @@ public class Program {
             if (userResponse.equalsIgnoreCase("N")) {
                 inputs = false;
             }
-            //System.out.println(buildTruck(cols, rows));
+            System.out.println(buildTruck(cols, rows));
         }
+    }
+    private static Map<Integer, Integer> buildTruck(int cols, int rows) {
+        Map<Integer, Integer> truckLayout = new HashMap<>();
+        for (int i = 0; i < cols; i++) {
+            truckLayout.put(i, i);
+        }
+        return truckLayout;
     }
 
     }
