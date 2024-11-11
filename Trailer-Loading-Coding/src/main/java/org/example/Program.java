@@ -47,13 +47,16 @@ public class Program {
             if (userResponse.equalsIgnoreCase("N")) {
                 inputs = false;
             }
-            System.out.println(buildTruck(cols, rows));
+            Map<Integer, Integer> truck = buildTruck(cols, rows);
+            System.out.println(truck);
         }
     }
     private static Map<Integer, Integer> buildTruck(int cols, int rows) {
         Map<Integer, Integer> truckLayout = new HashMap<>();
         for (int i = 0; i < cols; i++) {
-            truckLayout.put(i, i);
+            for(int j = i; j < rows; j++) {
+                truckLayout.put(i, j);
+            }
         }
         return truckLayout;
     }
