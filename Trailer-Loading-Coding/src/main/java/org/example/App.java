@@ -5,10 +5,10 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-import static org.example.Program.program;
-
 public class App {
     public static void main( String[] args ) {
+        Truck truck = new Truck(53, 10);
+
         String shape;
         String position;
         Map<String, String> shapeMap = new HashMap<>();
@@ -46,7 +46,7 @@ public class App {
             if (userResponse.equalsIgnoreCase("N")) {
                 inputs = false;
             }
+            truck.printTruck(53,10);
         }
-        //program();
         }
 }
