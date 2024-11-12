@@ -10,6 +10,7 @@ public class Truck {
         this.cols = cols;
         this.rows = rows;
         buildTruck();
+        printTruck();
     }
 
     public void buildTruck() {
@@ -21,7 +22,7 @@ public class Truck {
         }
     }
 
-    public void printTruck(int rows, int cols) {
+    public void printTruck() {
         for(int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++){
                 System.out.print("  " + truck[i][j]);

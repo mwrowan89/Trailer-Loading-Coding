@@ -8,7 +8,6 @@ import java.util.Scanner;
 public class App {
     public static void main( String[] args ) {
         Truck truck = new Truck(53, 10);
-
         String shape;
         String position;
         Map<String, String> shapeMap = new HashMap<>();
@@ -36,6 +35,7 @@ public class App {
             }
 
             shapeMap.put(position, shape);
+            truck.printTruck();
 
             System.out.println("Position: " + position);
             System.out.println("Shape: " + shape);
@@ -43,10 +43,10 @@ public class App {
             System.out.println("Add another shape? (Y/N)");
             String userResponse = input.nextLine();
 
+
             if (userResponse.equalsIgnoreCase("N")) {
                 inputs = false;
             }
-            truck.printTruck(53,10);
         }
         }
 }
