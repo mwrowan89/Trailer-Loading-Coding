@@ -6,15 +6,14 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class Program {
+    public static int rows = 52;
+    public static int cols = 10;
+    public static String[][] truck = buildTruck(rows, cols);
 
     public static void program() {
-        //buildTruck(cols, rows);
-        String[][] truck;
         String shape;
         String position;
         Map<String, String> shapeMap = new HashMap<>();
-        int rows = 52;
-        int cols = 10;
         boolean inputs = true;
 
         Scanner input = new Scanner(System.in);
@@ -49,31 +48,25 @@ public class Program {
             if (userResponse.equalsIgnoreCase("N")) {
                 inputs = false;
             }
-            truck = buildTruck(cols, rows);
-            System.out.println(Arrays.deepToString(truck));
-
-//            Map<Integer, Integer> truck = buildTruck(rows, cols);
-//            System.out.println(truck);
         }
     }
-//    private static Map<Integer, Integer> buildTruck(int rows, int cols) {
-//        Map<Integer, Integer> truckLayout = new HashMap<>();
-//        for (int i = 0; i < rows; i++) {
-//            for (int j = 0; j < cols; j++) {
-//                truckLayout.put(j, i);
-//            }
-//        }
-//
-//        return truckLayout;
-//    }
-    private static String[][] buildTruck(int cols, int rows) {
-        String[][] truck = new String[cols][rows];
-        for (int i = 1; i < cols; i++) {
-            for (int j = 0; j < rows; j++) {
+
+    private static String[][] buildTruck(int rows, int cols) {
+        for (int i = 1; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                assert truck != null;
                 truck[i][j] = "0";
             }
         }
         return truck;
+    }
+
+    private static void printTruck(int rows, int cols) {
+        for(int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++){
+                System.out.print("  " + truck[i][j] + "");
+            }
+        }
     }
 
     }
