@@ -1,9 +1,12 @@
 package org.example;
 
+import java.util.Map;
+
 public class Truck {
     public String[][] truck;
     private final int rows;
     private final int cols;
+    public Map<String, int[][]> shapes;
 
     public Truck(int rows, int cols) {
         this.truck = new String[rows][cols];
@@ -11,6 +14,10 @@ public class Truck {
         this.rows = rows;
         buildTruck();
         printTruck();
+    }
+
+    public void setShapes() {
+        shapes.put("O", new int[][]{{1, 1}, {1, 1}});
     }
 
     public void buildTruck() {
