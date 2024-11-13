@@ -1,5 +1,6 @@
 package org.example;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -38,17 +39,13 @@ public class Truck {
     }
 
     public void addShape(String shape, int position) {
-        Shapes shapes = new Shapes;
+        Shapes shapes = new Shapes();
 
-        if(shapes.){
-            System.out.println(shape);
-        }
-        else{
-            System.out.println("Shape does not exist");
-        }
-
-        truck[0][position] = "1";
-        System.out.println("Shape length: " + shapes.size());
+        if(shapes.getShapes(shape) != null){
+            System.out.println("YES!");
+            System.out.println(Arrays.deepToString(shapes.getShapes(shape)));
+        } else
+            System.out.println("NO!");
     }
 
     }
