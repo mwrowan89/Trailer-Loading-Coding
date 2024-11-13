@@ -1,21 +1,18 @@
 package org.example;
 
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
 
 public class Truck {
-    public String[][] truck;
+    public int[][] truck;
     private final int rows;
     private final int cols;
 
 
     public Truck(int rows, int cols) {
-        this.truck = new String[rows][cols];
+        this.truck = new int[rows][cols];
         this.cols = cols;
         this.rows = rows;
         buildTruck();
-
         printTruck();
     }
 
@@ -24,7 +21,7 @@ public class Truck {
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
                 assert truck != null;
-                truck[i][j] = "0";
+                truck[i][j] = 0;
             }
         }
     }
@@ -40,12 +37,13 @@ public class Truck {
 
     public void addShape(String shape, int position) {
         Shapes shapes = new Shapes();
+        int[][] shapePosition = shapes.getShapes(shape);
 
-        if(shapes.getShapes(shape) != null){
-            System.out.println("YES!");
-            System.out.println(Arrays.deepToString(shapes.getShapes(shape)));
-        } else
-            System.out.println("NO!");
+        for(int i = 0; i < shapePosition.length - 1; i++){
+            for(int j = 0; j < shapePosition.length - 1; j++) {
+                truck[shapePosition[i][j]][position] = 1;
+            }
+        }
     }
 
     }
