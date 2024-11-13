@@ -37,14 +37,12 @@ public class App {
             }
 
             shapeMap.put(position, shape);
+            truck.addShape(shape,Integer.parseInt(position));
             truck.printTruck();
 
             System.out.println("Position: " + position);
             System.out.println("Shape: " + shape);
-            System.out.println(shapeMap);
-
-            truck.addShape(shape,position);
-
+            System.out.println();
             System.out.println("Add another shape? (Y/N)");
             String userResponse = input.nextLine();
 

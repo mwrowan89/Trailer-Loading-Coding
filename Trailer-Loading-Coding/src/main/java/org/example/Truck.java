@@ -47,12 +47,16 @@ public class Truck {
         }
     }
 
-    public void addShape(String shape, String position) {
+    public void addShape(String shape, int position) {
         if(shapes.containsKey(shape)){
             System.out.println(shape);
         }
-        else
+        else{
             System.out.println("Shape does not exist");
+        }
+
+        truck[0][position] = "1";
+
     }
 
     }
