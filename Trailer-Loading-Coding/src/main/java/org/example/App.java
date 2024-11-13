@@ -6,8 +6,10 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class App {
+    public static int rows = 23;
+    public static int cols = 10;
     public static void main( String[] args ) {
-        Truck truck = new Truck(53, 10);
+        Truck truck = new Truck(rows, cols);
         String shape;
         String position;
         Map<String, String> shapeMap = new HashMap<>();
