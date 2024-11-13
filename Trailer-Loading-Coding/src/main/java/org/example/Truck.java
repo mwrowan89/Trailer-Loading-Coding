@@ -21,6 +21,9 @@ public class Truck {
         shapes.put("I", new int[][]{{1},{1},{1},{1}});
         shapes.put("S", new int[][]{{0,1},{1,1},{1,0}});
         shapes.put("Z", new int[][]{{1,0},{1,1},{0,1}});
+        shapes.put("L", new int[][]{{1,1},{1,0},{1,0},{1,0}});
+        shapes.put("J", new int[][]{{1,1},{0,1},{0,1},{0,1}});
+        shapes.put("T", new int[][]{{0,1},{1,1},{0,1}});
     }
 
     public void buildTruck() {
