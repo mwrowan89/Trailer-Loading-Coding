@@ -7,27 +7,17 @@ public class Truck {
     public String[][] truck;
     private final int rows;
     private final int cols;
-    public Map<String, int[][]> shapes;
+
 
     public Truck(int rows, int cols) {
         this.truck = new String[rows][cols];
         this.cols = cols;
         this.rows = rows;
         buildTruck();
-        setShapes();
+
         printTruck();
     }
 
-    public void setShapes() {
-        shapes = new HashMap<>();
-        shapes.put("O", new int[][]{{1, 1}, {1, 1}});
-        shapes.put("I", new int[][]{{1},{1},{1},{1}});
-        shapes.put("S", new int[][]{{0,1},{1,1},{1,0}});
-        shapes.put("Z", new int[][]{{1,0},{1,1},{0,1}});
-        shapes.put("L", new int[][]{{1,1},{1,0},{1,0},{1,0}});
-        shapes.put("J", new int[][]{{1,1},{0,1},{0,1},{0,1}});
-        shapes.put("T", new int[][]{{0,1},{1,1},{0,1}});
-    }
 
     public void buildTruck() {
         for (int i = 0; i < rows; i++) {
@@ -48,7 +38,9 @@ public class Truck {
     }
 
     public void addShape(String shape, int position) {
-        if(shapes.containsKey(shape)){
+        Shapes shapes = new Shapes;
+
+        if(shapes.){
             System.out.println(shape);
         }
         else{
@@ -56,7 +48,7 @@ public class Truck {
         }
 
         truck[0][position] = "1";
-
+        System.out.println("Shape length: " + shapes.size());
     }
 
     }
