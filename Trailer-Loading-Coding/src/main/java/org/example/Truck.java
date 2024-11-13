@@ -1,5 +1,6 @@
 package org.example;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class Truck {
@@ -13,10 +14,12 @@ public class Truck {
         this.cols = cols;
         this.rows = rows;
         buildTruck();
+        setShapes();
         printTruck();
     }
 
     public void setShapes() {
+        shapes = new HashMap<>();
         shapes.put("O", new int[][]{{1, 1}, {1, 1}});
         shapes.put("I", new int[][]{{1},{1},{1},{1}});
         shapes.put("S", new int[][]{{0,1},{1,1},{1,0}});
@@ -42,6 +45,14 @@ public class Truck {
             }
             System.out.println();
         }
+    }
+
+    public void addShape(String shape, String position) {
+        if(shapes.containsKey(shape)){
+            System.out.println(shape);
+        }
+        else
+            System.out.println("Shape does not exist");
     }
 
     }

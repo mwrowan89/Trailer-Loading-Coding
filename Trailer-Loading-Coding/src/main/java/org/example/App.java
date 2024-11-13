@@ -42,6 +42,9 @@ public class App {
             System.out.println("Position: " + position);
             System.out.println("Shape: " + shape);
             System.out.println(shapeMap);
+
+            truck.addShape(shape,position);
+
             System.out.println("Add another shape? (Y/N)");
             String userResponse = input.nextLine();
 
