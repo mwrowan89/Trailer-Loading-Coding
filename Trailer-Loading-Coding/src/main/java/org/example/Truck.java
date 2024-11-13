@@ -39,11 +39,15 @@ public class Truck {
         Shapes shapes = new Shapes();
         int[][] shapePosition = shapes.getShapes(shape);
 
-        for(int i = 0; i < shapePosition.length - 1; i++){
-            for(int j = 0; j < shapePosition.length - 1; j++) {
-                truck[shapePosition[i][j]][position] = 1;
-            }
-        }
+        System.out.println("Pos: " + Arrays.deepToString(shapePosition));
+        System.out.println("Len: " + shapePosition.length);
+
+//        for(int i = 0; i < shapePosition.length - 1; i++){
+//
+//            for(int j = 0; j < shapePosition.length - 1; j++) {
+//                truck[shapePosition[i][j]][position] = 1;
+//            }
+//        }
     }
 
     }
