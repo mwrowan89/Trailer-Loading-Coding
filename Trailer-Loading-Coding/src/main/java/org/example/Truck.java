@@ -43,8 +43,11 @@ public class Truck {
         System.out.println("Len: " + shapePosition.length);
 
         for(int i = 0; i < shapePosition.length; i++){
-            for(int j = 0; j < shapePosition.length - 1; j++) {
-                truck[shapePosition[i][j]][position] = 1;
+            for(int j = 0; j < shapePosition.length; j++) {
+                truck[j][position] = 1;
+                System.out.println(shapePosition[j][j]);
+                printTruck();
+                System.out.println();
             }
             position++;
         }
