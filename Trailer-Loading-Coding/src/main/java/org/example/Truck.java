@@ -37,18 +37,18 @@ public class Truck {
 
     public void addShape(String shape, int position) {
         Shapes shapes = new Shapes();
-        int[][] shapePosition = shapes.getShapes(shape);
+        int[][] currentShape = shapes.getShapes(shape);
 
-        System.out.println("Pos: " + Arrays.deepToString(shapePosition));
-        System.out.println("Len: " + shapePosition.length);
+        System.out.println("Pos: " + Arrays.deepToString(currentShape));
+        System.out.println("Len: " + currentShape.length);
 
-        for(int i = 0; i < shapePosition.length; i++){
-            for(int j = 0; j < shapePosition[j].length; j++) {
-                if(shapePosition[i][j] == 1) {
+        for(int i = 0; i < currentShape.length; i++){
+            for(int j = 0; j < currentShape[j].length; j++) {
+                if(currentShape[i][j] == 1) {
                     truck[j][position] = "\u001B[94m" + "7" + "\u001B[0m";
                 }
-                System.out.println("I . val: " + Arrays.toString(shapePosition[i]));
-                System.out.println("J . val: " + Arrays.toString(shapePosition[j]));
+                System.out.println("I . val: " + Arrays.toString((currentShape[i])));
+                System.out.println("J . val: " + Arrays.toString(currentShape[j]));
 //                printTruck();
                 System.out.println();
             }
