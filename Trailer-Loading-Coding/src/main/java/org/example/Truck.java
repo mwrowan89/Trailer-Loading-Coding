@@ -47,8 +47,8 @@ public class Truck {
                 if(shapePosition[i][j] == 1) {
                     truck[j][position] = "\u001B[94m" + "7" + "\u001B[0m";
                 }
-                System.out.println("I . len: " + shapePosition[i].length);
-                System.out.println("J . len: " +shapePosition[j].length);
+                System.out.println("I . val: " + Arrays.toString(shapePosition[i]));
+                System.out.println("J . val: " + Arrays.toString(shapePosition[j]));
 //                printTruck();
                 System.out.println();
             }
