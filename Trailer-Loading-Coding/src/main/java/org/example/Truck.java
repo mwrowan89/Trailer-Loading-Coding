@@ -45,11 +45,12 @@ public class Truck {
         for(int i = 0; i < currentShape.length; i++){
             for(int j = 0; j < currentShape[j].length; j++) {
                 if(currentShape[i][j] == 1) {
-                    truck[j][position] = "\u001B[94m" + "7" + "\u001B[0m";
+                    truck[currentShape[i][j]][position] = "\u001B[94m" + "7" + "\u001B[0m";
                 }
-                System.out.println("I . val: " + Arrays.toString((currentShape[i])));
-                System.out.println("J . val: " + Arrays.toString(currentShape[j]));
-//                printTruck();
+                System.out.println("Current shape val: " + (currentShape[i][j]));
+                System.out.println(Arrays.toString(currentShape[j]));
+                System.out.println("Current pos: " + position);
+                printTruck();
                 System.out.println();
             }
             position++;
