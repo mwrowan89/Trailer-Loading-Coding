@@ -3,13 +3,13 @@ package org.example;
 import java.util.Arrays;
 
 public class Truck {
-    public int[][] truck;
+    public String[][] truck;
     private final int rows;
     private final int cols;
 
 
     public Truck(int rows, int cols) {
-        this.truck = new int[rows][cols];
+        this.truck = new String[rows][cols];
         this.cols = cols;
         this.rows = rows;
         buildTruck();
@@ -21,7 +21,7 @@ public class Truck {
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
                 assert truck != null;
-                truck[i][j] = 0;
+                truck[i][j] = "0";
             }
         }
     }
@@ -44,9 +44,11 @@ public class Truck {
 
         for(int i = 0; i < shapePosition.length; i++){
             for(int j = 0; j < shapePosition.length; j++) {
-                truck[j][position] = 1;
+                if(shapePosition[i][j] == 1) {
+                    truck[j][position] = "\u001B[94m" + "7" + "\u001B[0m";
+                }
                 System.out.println(shapePosition[j][j]);
-                printTruck();
+//                printTruck();
                 System.out.println();
             }
             position++;
