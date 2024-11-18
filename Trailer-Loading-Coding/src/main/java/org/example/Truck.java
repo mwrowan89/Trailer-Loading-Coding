@@ -40,9 +40,10 @@ public class Truck {
     }
 
     public void addShape(String shape, int position) {
+        int[][] currentShape = shapeMap.get(shape);
 
-//        System.out.println("Pos: " + Arrays.deepToString(currentShape));
-//        System.out.println("Len: " + currentShape.length);
+        System.out.println("Pos: " + Arrays.deepToString(currentShape));
+        System.out.println("Len: " + currentShape.length);
 //
 //        for(int i = 0; i < currentShape.length; i++){
 //            for(int j = 0; j < currentShape[j].length; j++) {
