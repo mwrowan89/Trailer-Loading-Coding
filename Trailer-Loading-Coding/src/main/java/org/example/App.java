@@ -26,6 +26,7 @@ public class App {
             System.out.print("Please enter a number and shape: ");
             String userInput = input.nextLine();
             shape = userInput.substring(1).toUpperCase();
+            position = userInput.substring(0, 1).toUpperCase();
 
             if (userInput.substring(0, 1).equalsIgnoreCase(" ") || userInput.substring(1).equalsIgnoreCase("")) {
                 System.out.println("Invalid Entry.");
@@ -42,9 +43,6 @@ public class App {
                 System.out.println("Please provide a valid entry.");
                 continue;
             }
-
-                position = userInput.substring(0, 1).toUpperCase();
-                shape = userInput.substring(1).toUpperCase();
 
 
                 truck.addShape(shape,Integer.parseInt(position));
