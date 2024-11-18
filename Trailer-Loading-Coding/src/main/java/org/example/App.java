@@ -11,11 +11,13 @@ public class App {
     public static int cols = 10;
     public static void main( String[] args ) {
         Truck truck = new Truck(rows, cols);
+        Shapes shapes = new Shapes();
         String shape;
-        Shapes shapes = new Shapes(shape);
         String position;
-        Map<String, String> shapeMap = new HashMap<>();
         boolean inputs = true;
+
+        Map<String, int[][]> shapeMap = new HashMap<>(shapes.getShapes());
+
 
         Scanner input = new Scanner(System.in);
         System.out.println("Welcome To The Trailer-Loader-Coder!");
@@ -23,13 +25,14 @@ public class App {
         while (inputs) {
             System.out.print("Please enter a number and shape: ");
             String userInput = input.nextLine();
+            shape = userInput.substring(1).toUpperCase();
 
             if (userInput.substring(0, 1).equalsIgnoreCase(" ") || userInput.substring(1).equalsIgnoreCase("")) {
                 System.out.println("Invalid Entry.");
                 System.out.println("Provide a valid entry.");
                 continue;
             }
-            if(shapes(shape)){
+            if(!shapeMap.containsKey(shape)){
                 System.out.println("Invalid Entry.");
                 System.out.println("Provide a valid entry.");
                 continue;
@@ -43,7 +46,7 @@ public class App {
                 position = userInput.substring(0, 1).toUpperCase();
                 shape = userInput.substring(1).toUpperCase();
 
-                shapeMap.put(position, shape);
+
                 truck.addShape(shape,Integer.parseInt(position));
                 truck.printTruck();
 

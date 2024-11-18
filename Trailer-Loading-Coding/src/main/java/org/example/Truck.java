@@ -37,7 +37,7 @@ public class Truck {
 
     public void addShape(String shape, int position) {
         Shapes shapes = new Shapes();
-        int[][] currentShape = shapes.getShapes(shape);
+        int[][] currentShape = shapes.getShapes();
 
         System.out.println("Pos: " + Arrays.deepToString(currentShape));
         System.out.println("Len: " + currentShape.length);
