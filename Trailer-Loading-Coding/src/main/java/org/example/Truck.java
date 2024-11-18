@@ -1,11 +1,15 @@
 package org.example;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Truck {
     public String[][] truck;
     private final int rows;
     private final int cols;
+    Shapes shapes = new Shapes();
+    Map<String, int[][]> shapeMap = new HashMap<>(shapes.getShapes());
 
 
     public Truck(int rows, int cols) {
@@ -36,25 +40,23 @@ public class Truck {
     }
 
     public void addShape(String shape, int position) {
-        Shapes shapes = new Shapes();
-        int[][] currentShape = shapes.getShapes();
 
-        System.out.println("Pos: " + Arrays.deepToString(currentShape));
-        System.out.println("Len: " + currentShape.length);
-
-        for(int i = 0; i < currentShape.length; i++){
-            for(int j = 0; j < currentShape[j].length; j++) {
-                if(currentShape[i][j] == 1) {
-                    truck[currentShape[i][j]][position] = "\u001B[94m" + "7" + "\u001B[0m";
-                }
-                System.out.println("Current shape val: " + (currentShape[i][j]));
-                System.out.println(Arrays.toString(currentShape[j]));
-                System.out.println("Current pos: " + position);
-                printTruck();
-                System.out.println();
-            }
-            position++;
-        }
+//        System.out.println("Pos: " + Arrays.deepToString(currentShape));
+//        System.out.println("Len: " + currentShape.length);
+//
+//        for(int i = 0; i < currentShape.length; i++){
+//            for(int j = 0; j < currentShape[j].length; j++) {
+//                if(currentShape[i][j] == 1) {
+//                    truck[currentShape[i][j]][position] = "\u001B[94m" + "7" + "\u001B[0m";
+//                }
+//                System.out.println("Current shape val: " + (currentShape[i][j]));
+//                System.out.println(Arrays.toString(currentShape[j]));
+//                System.out.println("Current pos: " + position);
+//                printTruck();
+//                System.out.println();
+//            }
+//            position++;
+//        }
     }
 
     }
