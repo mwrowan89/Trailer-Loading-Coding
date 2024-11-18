@@ -42,12 +42,18 @@ public class Truck {
     public void addShape(String shape, int position) {
         int[][] currentShape = shapeMap.get(shape);
 
+        int shapeHeight = currentShape.length;
+        int shapeWidth = currentShape[0].length;
+
+        System.out.println("Shape height: " + shapeHeight);
+        System.out.println("Shape width: "+ shapeWidth);
+
         System.out.println("Pos: " + Arrays.deepToString(currentShape));
         System.out.println("Len: " + currentShape.length);
 
         for(int i = 0; i < currentShape.length; i++){
             for(int j = 0; j < currentShape[j].length; j++) {
-                if(currentShape[i][j] == 1) {
+                if(currentShape[j][j] == 1) {
                     truck[currentShape[i][j]][position] = "\u001B[94m" + "7" + "\u001B[0m";
                 }
                 System.out.println("Current shape val: " + (currentShape[i][j]));
