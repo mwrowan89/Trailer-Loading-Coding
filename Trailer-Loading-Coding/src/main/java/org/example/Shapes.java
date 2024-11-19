@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Shapes {
-    public Map<String, int[][]> shapes = new HashMap<>();;
+    public Map<String, int[][]> shapes = new HashMap<>();
 
     public Map<String, int[][]> getShapes() {
         //TODO fix shape sizing and spacing;

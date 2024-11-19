@@ -1,7 +1,5 @@
 package org.example;
 
-
-import java.awt.*;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -58,23 +56,6 @@ public class App {
                 if (userResponse.equalsIgnoreCase("N")) {
                     inputs = false;
                 }
-//            position = userInput.substring(0, 1).toUpperCase();
-//            shape = userInput.substring(1).toUpperCase();
-//
-//            shapeMap.put(position, shape);
-//            truck.addShape(shape,Integer.parseInt(position));
-//            truck.printTruck();
-//
-//            System.out.println("Position: " + position);
-//            System.out.println("Shape: " + shape);
-//            System.out.println();
-//            System.out.println("Add another shape? (Y/N)");
-//            String userResponse = input.nextLine();
-//
-//
-//            if (userResponse.equalsIgnoreCase("N")) {
-//                inputs = false;
-//            }
         }
         }
 }
