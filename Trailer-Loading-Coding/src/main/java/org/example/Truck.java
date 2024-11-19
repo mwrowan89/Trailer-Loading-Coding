@@ -59,19 +59,6 @@ public class Truck {
             }
         }
 
-//        for(int i = 0; i < currentShape.length; i++){
-//            for(int j = 0; j < currentShape[j].length; j++) {
-//                if(currentShape[j][j] == 1) {
-//                    truck[currentShape[i][j]][position] = "\u001B[94m" + "7" + "\u001B[0m";
-//                }
-//                System.out.println("Current shape val: " + (currentShape[i][j]));
-//                System.out.println(Arrays.toString(currentShape[j]));
-//                System.out.println("Current pos: " + position);
-//                printTruck();
-//                System.out.println();
-//            }
-//            position++;
-//        }
     }
 
     }
