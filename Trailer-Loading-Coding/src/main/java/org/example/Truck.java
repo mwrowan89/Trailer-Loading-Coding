@@ -46,7 +46,7 @@ public class Truck {
         int shapeWidth = currentShape[0].length;
         int y = 0;
 
-        while(y + shapeHeight <= rows && shapeCollision(currentShape, cols, rows)){
+        while(y + shapeHeight <= rows && shapeCollision(currentShape, rows, cols)){
             y++;
         }
 
@@ -73,7 +73,7 @@ public class Truck {
     public boolean shapeCollision(int[][] shape, int x, int y) {
         for (int i = 0; i < shape.length; i++) {
             for (int j = 0; j < shape[0].length; j++) {
-                if(y + i >= 0 && y + i < rows && x + j >= 0 && x + j < cols) { //checking if shape is inbounds
+                if(y + i >= 0 && y + i < cols && x + j >= 0 && x + j < rows) { //checking if shape is inbounds
                     if (shape[i][j] == 1 && (truck[y + i][x + j].equals("1"))) {
                         return true;
                     }
