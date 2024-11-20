@@ -59,9 +59,10 @@ public class Truck {
                     }
                 }
             }
+        } else {
+            System.out.println("SHAPE NOT ADDED!");
+            System.out.println("Shape or shapes have exceeded maximum size of the truck, try a different x-coordinate.");
         }
-
-
     }
 
     }
