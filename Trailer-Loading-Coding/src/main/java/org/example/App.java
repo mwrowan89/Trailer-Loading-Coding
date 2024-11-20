@@ -23,6 +23,12 @@ public class App {
         while (inputs) {
             System.out.print("Please enter a number and shape: ");
             String userInput = input.nextLine();
+
+            if(userInput.equalsIgnoreCase("")){
+                System.out.println("Invalid Entry.");
+                System.out.println("Provide a valid entry.");
+                continue;
+            }
             shape = userInput.substring(1).toUpperCase();
             position = userInput.substring(0, 1).toUpperCase();
 
