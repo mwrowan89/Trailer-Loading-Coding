@@ -51,13 +51,16 @@ public class Truck {
         System.out.println("Pos: " + Arrays.deepToString(currentShape));
         System.out.println("Len: " + currentShape.length);
 
-        for(int i = 0; i < shapeHeight; i++) {
-            for(int j = 0; j < shapeWidth; j++) {
-                if(currentShape[i][j] == 1) {
-                    truck[i][position + j] = "\u001B[94m" + "1" + "\u001B[0m";
+        if(position + shapeWidth <= cols) {
+            for(int i = 0; i < shapeHeight; i++) {
+                for(int j = 0; j < shapeWidth; j++) {
+                    if(currentShape[i][j] == 1) {
+                        truck[i][position + j] = "\u001B[94m" + "1" + "\u001B[0m";
+                    }
                 }
             }
         }
+
 
     }
 

@@ -29,6 +29,7 @@ public class App {
                 System.out.println("Provide a valid entry.");
                 continue;
             }
+
             shape = userInput.substring(1).toUpperCase();
             position = userInput.substring(0, 1).toUpperCase();
 
