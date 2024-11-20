@@ -44,6 +44,11 @@ public class Truck {
 
         int shapeHeight = currentShape.length;
         int shapeWidth = currentShape[0].length;
+        int y = 0;
+
+        while(y + shapeHeight <= rows && shapeCollision(currentShape, cols, rows)){
+            y++;
+        }
 
         System.out.println("Shape height: " + shapeHeight);
         System.out.println("Shape width: "+ shapeWidth);
@@ -55,7 +60,7 @@ public class Truck {
             for(int i = 0; i < shapeHeight; i++) {
                 for(int j = 0; j < shapeWidth; j++) {
                     if(currentShape[i][j] == 1) {
-                        truck[i][position + j] = "\u001B[94m" + "1" + "\u001B[0m";
+                        truck[y + i][position + j] = "\u001B[94m" + "1" + "\u001B[0m";
                     }
                 }
             }
@@ -63,6 +68,21 @@ public class Truck {
             System.out.println("SHAPE NOT ADDED!");
             System.out.println("Shape or shapes have exceeded maximum size of the truck, try a different x-coordinate.");
         }
+    }
+
+    public boolean shapeCollision(int[][] shape, int x, int y) {
+        for (int i = 0; i < shape.length; i++) {
+            for (int j = 0; j < shape[0].length; j++) {
+                if(y + i >= 0 && y + i < rows && x + j >= 0 && x + j < cols) { //checking if shape is inbounds
+                    if (shape[i][j] == 1 && (truck[y + i][x + j].equals("1"))) {
+                        return true;
+                    }
+                } else {
+                    return false;
+                }
+            }
+        }
+        return false;
     }
 
     }
