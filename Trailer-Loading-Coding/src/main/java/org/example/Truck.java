@@ -51,12 +51,12 @@ public class Truck {
             y++;
         }
 
-        System.out.println("Y: " + y);
-        System.out.println("Shape height: " + shapeHeight);
-        System.out.println("Shape width: "+ shapeWidth);
-
-        System.out.println("Pos: " + Arrays.deepToString(currentShape));
-        System.out.println("Len: " + currentShape.length);
+//        System.out.println("Y: " + y);
+//        System.out.println("Shape height: " + shapeHeight);
+//        System.out.println("Shape width: "+ shapeWidth);
+//
+//        System.out.println("Pos: " + Arrays.deepToString(currentShape));
+//        System.out.println("Len: " + currentShape.length);
 
         if(position + shapeWidth <= cols) {
             for(int i = 0; i < shapeHeight; i++) {

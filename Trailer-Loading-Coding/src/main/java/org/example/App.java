@@ -23,6 +23,7 @@ public class App {
 
         while (inputs) {
             System.out.print("Enter input (x-coordinate (0-9) and a shape (O, I, S, Z, L, J, T)): ");
+            System.out.println("Separate inputs with a single comma.");
             String userInput = input.nextLine();
 
             if(userInput.equalsIgnoreCase("")){
