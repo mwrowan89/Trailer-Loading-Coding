@@ -55,8 +55,8 @@ public class App {
                 }
 
                 truck.addShape(shape,Integer.parseInt(position));
-                System.out.println("Position: " + position);
-                System.out.println("Shape: " + shape);
+//                System.out.println("Position: " + position);
+//                System.out.println("Shape: " + shape);
             }
 
                 truck.printTruck();
