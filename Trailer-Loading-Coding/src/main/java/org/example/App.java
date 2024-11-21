@@ -10,6 +10,7 @@ public class App {
     public static void main( String[] args ) {
         Truck truck = new Truck(rows, cols);
         Shapes shapes = new Shapes();
+        String[] parts;
         String shape;
         String position;
         boolean inputs = true;
@@ -30,31 +31,36 @@ public class App {
                 continue;
             }
 
-            shape = userInput.substring(1).toUpperCase();
-            position = userInput.substring(0, 1).toUpperCase();
+            parts = userInput.split(",");
 
-            if (userInput.substring(0, 1).equalsIgnoreCase(" ") || userInput.substring(1).equalsIgnoreCase("")) {
-                System.out.println("Invalid Entry.");
-                System.out.println("Provide a valid entry.");
-                continue;
-            }
-            if(!shapeMap.containsKey(shape)){
-                System.out.println("Invalid Entry.");
-                System.out.println("Provide a valid entry.");
-                continue;
-            }
-            if (userInput.length() > 2) {
-                System.out.println("Invalid Entry.");
-                System.out.println("Please provide a valid entry.");
-                continue;
-            }
-
+            for(String part : parts) {
+                part = part.trim();
+                position = part.substring(0, 1).toUpperCase();
+                shape = part.substring(1).toUpperCase();
+                if (userInput.substring(0, 1).equalsIgnoreCase(" ") || userInput.substring(1).equalsIgnoreCase("")) {
+                    System.out.println("Invalid Entry.");
+                    System.out.println("Provide a valid entry.");
+                    continue;
+                }
+                if(!shapeMap.containsKey(shape)){
+                    System.out.println("Invalid Entry.");
+                    System.out.println("Provide a valid entry.");
+                    continue;
+                }
+                if (userInput.length() < 2) {
+                    System.out.println("Invalid Entry.");
+                    System.out.println("Please provide a valid entry.");
+                    continue;
+                }
 
                 truck.addShape(shape,Integer.parseInt(position));
-                truck.printTruck();
-
                 System.out.println("Position: " + position);
                 System.out.println("Shape: " + shape);
+            }
+
+                truck.printTruck();
+
+
                 System.out.println();
                 System.out.println("Add another shape? (Y/N)");
                 String userResponse = input.nextLine();

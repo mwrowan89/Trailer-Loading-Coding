@@ -62,7 +62,7 @@ public class Truck {
             for(int i = 0; i < shapeHeight; i++) {
                 for(int j = 0; j < shapeWidth; j++) {
                     if(currentShape[i][j] == 1) {
-                        truck[y + i][position + j] = "1";
+                            truck[y + i][position + j] = "\u001B[94m" + "1" + "\u001B[0m";
                     }
                 }
             }
@@ -76,7 +76,7 @@ public class Truck {
         for (int i = 0; i < shape.length; i++) {
             for (int j = 0; j < shape[0].length; j++) {
                 if(y + i >= 0 && y + i < rows && x + j >= 0 && x + j < cols) { //checking if shape is inbounds
-                    if (shape[i][j] == 1 && (truck[y + i][x + j].equals("1"))) {
+                    if (shape[i][j] == 1 && (truck[y + i][x + j].equals("\u001B[94m" + "1" + "\u001B[0m"))) {
                         return true;
                     }
                 } else {
