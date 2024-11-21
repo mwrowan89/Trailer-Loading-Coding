@@ -22,7 +22,7 @@ public class App {
         System.out.println("Welcome To The Trailer-Loader-Coder!");
 
         while (inputs) {
-            System.out.print("Please enter a number and shape: ");
+            System.out.print("Enter input (x-coordinate (0-9) and a shape (O, I, S, Z, L, J, T)): ");
             String userInput = input.nextLine();
 
             if(userInput.equalsIgnoreCase("")){
