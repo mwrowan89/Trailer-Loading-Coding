@@ -21,8 +21,10 @@ public class App {
         System.out.println("Welcome To The Trailer-Loader-Coder!");
 
         while (inputs) {
-            System.out.println("Enter input (x-coordinate (0-9) and a shape (O, I, S, Z, L, J, T)): ");
-            System.out.println("Separate inputs with a single comma.");
+            System.out.println("Enter input (x-coordinate (0-9)");
+            System.out.println("+ a Shape (O, I, S, Z, L, J, T))");
+            System.out.println("Separate each input with a single comma.");
+            System.out.println("example: 4I, 5T, 1L,...");
             System.out.print("Inputs: ");
             String userInput = input.nextLine();
 

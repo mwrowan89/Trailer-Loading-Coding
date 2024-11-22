@@ -41,7 +41,6 @@ public class Truck {
     }
 
     public void addShape(String shape, int position) {
-        //TODO add protections against shapes overflowing the length of the truck
         int[][] currentShape = shapeMap.get(shape);
 
         int shapeHeight = currentShape.length;
