@@ -18,7 +18,6 @@ public class Truck {
         buildTruck();
         printTruck();
     }
-    //TODO track the y coordinate and return its value
     //TODO change print truck to display different colors and shape values
 
 
