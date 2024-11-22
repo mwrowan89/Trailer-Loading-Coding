@@ -83,11 +83,11 @@ public class Truck {
 
     public int findMaxY() {
         int maxY = 0;
-        for(int i = rows; i >= 0; i--) {
-            for(int j = cols; j >= 0; j--) {
-                if (truck[i][j].equals("0")) {
+        for(int i = rows - 1; i >= 0; i--) {
+            for(int j = cols - 1; j >= 0; j--) {
+                if (!truck[i][j].equals("0")) {
                     maxY = i;
-                    break;
+                    return maxY;
                 }
             }
         }
