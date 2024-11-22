@@ -57,6 +57,8 @@ public class App {
             }
 
                 truck.printTruck();
+                System.out.println("Max Y: " + truck.findMaxY());
+
 
 
                 System.out.println();

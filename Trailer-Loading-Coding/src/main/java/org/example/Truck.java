@@ -81,6 +81,19 @@ public class Truck {
         return false;
     }
 
+    public int findMaxY() {
+        int maxY = 0;
+        for(int i = rows; i >= 0; i--) {
+            for(int j = cols; j >= 0; j--) {
+                if (truck[i][j].equals("0")) {
+                    maxY = i;
+                    break;
+                }
+            }
+        }
+        return maxY;
+    }
+
     }
 
 
