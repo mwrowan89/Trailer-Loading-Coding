@@ -40,7 +40,7 @@ public class Truck {
         }
     }
 
-    public void addShape(String shape, int position) {
+    public void addShape(int position, String shape) {
         int[][] currentShape = shapeMap.get(shape);
 
         int shapeHeight = currentShape.length;

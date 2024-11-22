@@ -40,7 +40,7 @@ public class App {
                 part = part.trim();
                 position = part.substring(0, 1).toUpperCase();
                 shape = part.substring(1).toUpperCase();
-                if (part.substring(0, 1).equalsIgnoreCase(" ") || part.substring(1).equalsIgnoreCase("")) {
+                if (part.substring(0, 1).equalsIgnoreCase(" ") || part.substring(1).equalsIgnoreCase(" ")) {
                     System.out.println("Invalid Entry.");
                     System.out.println("Provide a valid entry.");
                     continue;
@@ -55,8 +55,13 @@ public class App {
                     System.out.println("Please provide a valid entry.");
                     continue;
                 }
-
-                truck.addShape(shape,Integer.parseInt(position));
+                if(Integer.parseInt(position) > 10 || Integer.parseInt(position) < 0){
+                    System.out.println("Invalid Entry.");
+                    System.out.println("Please provide a valid entry.");
+                    continue;
+                }
+                //TODO protect against double letter inputs
+                truck.addShape(Integer.parseInt(position), shape);
             }
 
                 truck.printTruck();
