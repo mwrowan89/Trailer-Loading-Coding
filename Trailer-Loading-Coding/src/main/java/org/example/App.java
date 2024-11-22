@@ -7,6 +7,7 @@ import java.util.Scanner;
 public class App {
     public static int rows = 23;
     public static int cols = 10;
+
     public static void main( String[] args ) {
         Truck truck = new Truck(rows, cols);
         Shapes shapes = new Shapes();

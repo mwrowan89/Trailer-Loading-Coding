@@ -18,6 +18,7 @@ public class Truck {
         buildTruck();
         printTruck();
     }
+
     //TODO change print truck to display different colors and shape values
 
 
@@ -51,7 +52,7 @@ public class Truck {
             y++;
         }
 
-        if(position + shapeWidth <= cols) {
+        if(position + shapeWidth <= cols && y + shapeHeight <= rows) {
             for(int i = 0; i < shapeHeight; i++) {
                 for(int j = 0; j < shapeWidth; j++) {
                     if(currentShape[i][j] == 1) {
@@ -93,6 +94,4 @@ public class Truck {
         return maxY;
     }
 
-    }
-
-
+}
