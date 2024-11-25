@@ -21,6 +21,8 @@ public class Truck {
 
 
     public void buildTruck() {
+        //Creates an empty grid for shapes to be added into
+
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
                 assert truck != null;
@@ -30,10 +32,14 @@ public class Truck {
     }
 
     public void printTruck() {
+        //Updates the "truck" grid with shapes that have been successfully added
+
         for(int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++){
                 if(!truck[i][j].equals("0")){
                     switch (truck[i][j]) {
+                        //Adds shape with corresponding color to the grid
+
                         case "I":
                             System.out.print("\u001B[94m" + " I " + "\u001B[0m");
                             break;
@@ -68,6 +74,8 @@ public class Truck {
     }
 
     public void addShape(int position, String shape) {
+        //Adds shape to the grid
+
         int[][] currentShape = shapeMap.get(shape);
 
         int shapeHeight = currentShape.length;
@@ -75,10 +83,14 @@ public class Truck {
         int y = 0;
 
         while (y + shapeHeight <= rows && shapeCollision(currentShape, position, y)){
+            //Uses the shapeCollision function to move the y-axis if the current shape will not fit
+
             y++;
         }
 
         if(position + shapeWidth <= cols && y + shapeHeight <= rows) {
+            //Checks to see if shape fits within the grid boundaries
+
             for(int i = 0; i < shapeHeight; i++) {
                 for(int j = 0; j < shapeWidth; j++) {
                     if(currentShape[i][j] == 1) {
@@ -93,6 +105,8 @@ public class Truck {
     }
 
     public boolean shapeCollision(int[][] shape, int x, int y) {
+        //Checks if shape can be placed in desired position
+
         for (int i = 0; i < shape.length; i++) {
             for (int j = 0; j < shape[0].length; j++) {
                 if(y + i >= 0 && y + i < rows && x + j >= 0 && x + j < cols) { //checking if shape is inbounds
@@ -108,6 +122,8 @@ public class Truck {
     }
 
     public int findMaxY() {
+        //Tracks the maximum depth of the shapes added into the truck and returns the result
+
         int maxY = 0;
         for(int i = rows - 1; i >= 0; i--) {
             for(int j = cols - 1; j >= 0; j--) {
