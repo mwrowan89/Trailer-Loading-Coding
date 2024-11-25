@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -38,7 +39,7 @@ public class App {
 
             for(String part : parts) {
                 part = part.trim();
-                position = part.substring(0, 1).toUpperCase();
+                position = part.substring(0, 1);
                 shape = part.substring(1).toUpperCase();
                 if (part.substring(0, 1).equalsIgnoreCase(" ") || part.substring(1).equalsIgnoreCase(" ")) {
                     System.out.println("Invalid Entry.");
@@ -55,7 +56,7 @@ public class App {
                     System.out.println("Please provide a valid entry.");
                     continue;
                 }
-                if(Integer.parseInt(position) > 10 || Integer.parseInt(position) < 0){
+                if(Character.getNumericValue(position.charAt(0)) > 10){
                     System.out.println("Invalid Entry: " + part);
                     System.out.println("Please provide a valid entry.");
                     continue;
