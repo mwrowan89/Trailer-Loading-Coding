@@ -19,8 +19,6 @@ public class Truck {
         printTruck();
     }
 
-    //TODO change print truck to display different colors and shape values
-
 
     public void buildTruck() {
         for (int i = 0; i < rows; i++) {
@@ -40,22 +38,23 @@ public class Truck {
                             System.out.print("\u001B[94m" + " I " + "\u001B[0m");
                             break;
                         case "T":
-                            System.out.print("\u001B[94m" + " T " + "\u001B[0m");
+                            System.out.print("\033[1;35m" + " T " + "\u001B[0m");
                             break;
                         case "L":
                             System.out.print("\u001B[94m" + " L " + "\u001B[0m");
                             break;
                         case "O":
-                            System.out.print("\u001B[94m" + " O " + "\u001B[0m");
+                            System.out.print("\u001B[93m" + " O " + "\u001B[0m");
                             break;
                         case "J":
-                            System.out.print("\u001B[94m" + " J " + "\u001B[0m");
+                            System.out.print("\u001B[95m" + " J " + "\u001B[0m");
                             break;
                         case "S":
-                            System.out.print("\u001B[94m" + " S " + "\u001B[0m");
+                            System.out.print("\u001B[91m" + " S " + "\u001B[0m");
                             break;
                         case "Z":
-                            System.out.print("\u001B[94m" + " Z " + "\u001B[0m");
+                            System.out.print("\u001B[92m" + " Z " + "\u001B[0m");
+                            break;
                         case "X":
                             System.out.print("\u001B[94m" + " X " + "\u001B[0m");
                             break;
