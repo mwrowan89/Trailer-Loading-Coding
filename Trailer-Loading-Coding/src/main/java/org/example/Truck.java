@@ -69,7 +69,7 @@ public class Truck {
         for (int i = 0; i < shape.length; i++) {
             for (int j = 0; j < shape[0].length; j++) {
                 if(y + i >= 0 && y + i < rows && x + j >= 0 && x + j < cols) { //checking if shape is inbounds
-                    if (shape[i][j] == 1 && (truck[y + i][x + j].equals("\u001B[94m" + "1" + "\u001B[0m"))) {
+                    if (shape[i][j] == 1 && !truck[y + i][x + j].equals("0")) {
                         return true;
                     }
                 } else {
