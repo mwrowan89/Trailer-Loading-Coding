@@ -46,17 +46,17 @@ public class App {
                     continue;
                 }
                 if(!shapeMap.containsKey(shape)){
-                    System.out.println("Invalid Entry.");
+                    System.out.println("Invalid Entry: " + part);
                     System.out.println("Provide a valid entry.");
                     continue;
                 }
                 if (part.length() < 2) {
-                    System.out.println("Invalid Entry.");
+                    System.out.println("Invalid Entry: " + part);
                     System.out.println("Please provide a valid entry.");
                     continue;
                 }
                 if(Integer.parseInt(position) > 10 || Integer.parseInt(position) < 0){
-                    System.out.println("Invalid Entry.");
+                    System.out.println("Invalid Entry: " + part);
                     System.out.println("Please provide a valid entry.");
                     continue;
                 }
