@@ -43,7 +43,7 @@ public class Truck {
                             System.out.print("\u001B[94m" + " T " + "\u001B[0m");
                             break;
                         case "L":
-                            System.out.print("\u001B[94m" + " T " + "\u001B[0m");
+                            System.out.print("\u001B[94m" + " L " + "\u001B[0m");
                             break;
                         case "O":
                             System.out.print("\u001B[94m" + " O " + "\u001B[0m");
@@ -56,6 +56,9 @@ public class Truck {
                             break;
                         case "Z":
                             System.out.print("\u001B[94m" + " Z " + "\u001B[0m");
+                        case "X":
+                            System.out.print("\u001B[94m" + " X " + "\u001B[0m");
+                            break;
                     }
                 } else {
                     System.out.print(" " + truck[i][j] + " ");
