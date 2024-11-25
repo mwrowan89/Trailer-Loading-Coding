@@ -5,6 +5,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class App {
+    //Initializes the size of the desired truck
     public static int rows = 23;
     public static int cols = 10;
 
