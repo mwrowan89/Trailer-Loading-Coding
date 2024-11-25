@@ -55,7 +55,7 @@ public class Truck {
             for(int i = 0; i < shapeHeight; i++) {
                 for(int j = 0; j < shapeWidth; j++) {
                     if(currentShape[i][j] == 1) {
-                            truck[y + i][position + j] = "\u001B[94m" + "1" + "\u001B[0m";
+                            truck[y + i][position + j] = "\u001B[94m" + shape + "\u001B[0m";
                     }
                 }
             }

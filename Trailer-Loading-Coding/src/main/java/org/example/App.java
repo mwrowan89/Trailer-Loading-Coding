@@ -61,7 +61,6 @@ public class App {
                     System.out.println("Please provide a valid entry.");
                     continue;
                 }
-                //TODO protect against double letter inputs
                 truck.addShape(Integer.parseInt(position), shape);
             }
 
