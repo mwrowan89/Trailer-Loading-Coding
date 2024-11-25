@@ -35,12 +35,19 @@ public class Truck {
         for(int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++){
                 if(!truck[i][j].equals("0")){
-                    if(truck[i][j].equals("I")){
-                        System.out.print("\u001B[94m" + " I " + "\u001B[0m");
-                    } else if (truck[i][j].equals("T")) {
-                        System.out.print("\u001B[94m" + " T " + "\u001B[0m");
-                    } else if (truck[i][j].equals("L")) {
-                        System.out.print("\u001B[94m" + " T " + "\u001B[0m");
+                    switch (truck[i][j]) {
+                        case "I":
+                            System.out.print("\u001B[94m" + " I " + "\u001B[0m");
+                            break;
+                        case "T":
+                            System.out.print("\u001B[94m" + " T " + "\u001B[0m");
+                            break;
+                        case "L":
+                            System.out.print("\u001B[94m" + " T " + "\u001B[0m");
+                            break;
+                        case "O":
+                            System.out.print("\u001B[94m" + " O " + "\u001B[0m");
+                            break;
                     }
                 } else {
                     System.out.print(" " + truck[i][j] + " ");
